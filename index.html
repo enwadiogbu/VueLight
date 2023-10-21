@@ -17,12 +17,12 @@
             <li><a href="">Contemporary</a></li>
             <li><a href="">Affordable</a></li>
         </ul>
-        <button type="button"><span></span></button>
+        <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
     </nav>
 
     <div class="lamp-container">
         <img src="/vueLamp_img/images/lamp.png" class="lamp">
-        <img src="/vueLamp_img/images/light.png" class="light">
+        <img src="/vueLamp_img/images/light.png" class="light" id="light">
     </div>
 
     <div class="div text-container">
@@ -37,6 +37,14 @@
     </div>
 </div>
 
+<script>
+    var btn = document.getElementById("btn");
+    var light = document.getElementById("light");
 
+    function toggleBtn() {
+        btn.classList.toggle("active");
+        light.classList.toggle("on");
+    }
+</script>
 </body>
 </html>
